@@ -14,22 +14,22 @@ const iconMap: Record<string, typeof Code> = {
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce web',
-    description: 'Full-stack e-commerce solution with payment integration',
+    title: 'Hasib',
+    description: 'Full-stack wallet solution with payment integration',
     technologies: ['React', 'Tailwind CSS', 'FastAPI'],
     image: 'https://i.postimg.cc/HxFZ7QMq/2.png',
   },
   {
     id: 2,
     title: 'LGK site',
-    description: 'Cross-platform fitness tracking application',
+    description: 'Corporate website for a leading logistics company',
     technologies: ['React', 'FastAPI'],
     image: 'https://i.postimg.cc/T2WHv48k/c956a60f-1a09-4f27-a7a6-483f406a1ab5.png',
   },
   {
     id: 3,
-    title: 'Dashbord Admin',
-    description: 'Collaborative project management tool',
+    title: 'Dashboard Admin',
+    description: 'Admin dashboard for managing users and content',
     technologies: ['React', 'Bootstrap', 'FastAPI'],
     image: 'https://i.postimg.cc/T1mkjpjS/60a2f8d9_3d76_45f9_bc24_7bd43bf42fa2.png',
   },
@@ -43,17 +43,18 @@ const projects = [
   {
     id: 5,
     title: 'Marketplace App',
-    description: 'Beautiful Flutter app for travel bookings',
+    description: 'Mobile marketplace application for buying and selling products',
     technologies: ['React Native', 'FastAPI'],
     image: 'https://i.postimg.cc/fW0gQr41/a156f4db_3a66_4443_a61a_68d9ef040b61.png',
   },
   {
     id: 6,
     title: 'Restaurant App',
-    description: 'Modern restaurant application with online ordering',
-    technologies: ['Fluter', 'FastAPI'],
+    description: 'Mobile app for restaurant reservations and menu browsing',
+    technologies: ['Flutter', 'FastAPI'],
     image: 'https://i.postimg.cc/yx9fhkXJ/530afea5_ec74_4c32_a132_599d73c4e873.png',
   },
+  
 ];
 
 export function Projects() {
