@@ -1,85 +1,96 @@
-import { Code, Smartphone, Wind, Box, Palette, Zap } from 'lucide-react';
+import { MouseEvent } from 'react';
+import { Code, Smartphone, Wind, Box, Palette, Zap, Server } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const skills = [
   {
+    key: 'react' as const,
     name: 'React',
-    description: 'JavaScript framework for building UIs',
     icon: Code,
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-amber-500 to-yellow-500',
   },
   {
+    key: 'reactNative' as const,
     name: 'React Native',
-    description: 'Mobile app development',
     icon: Smartphone,
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-amber-500 to-yellow-500',
   },
   {
+    key: 'flutter' as const,
     name: 'Flutter',
-    description: 'Cross-platform application development',
     icon: Box,
-    color: 'from-sky-500 to-blue-500',
+    color: 'from-amber-500 to-yellow-500',
   },
   {
+    key: 'bootstrap' as const,
     name: 'Bootstrap',
-    description: 'CSS framework for responsive design',
     icon: Palette,
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-amber-500 to-yellow-500',
   },
   {
+    key: 'tailwind' as const,
     name: 'Tailwind CSS',
-    description: 'Modern CSS design system',
     icon: Wind,
-    color: 'from-teal-500 to-cyan-500',
+    color: 'from-amber-500 to-yellow-500',
   },
   {
+    key: 'fastapi' as const,
     name: 'FastAPI',
-    description: 'Python framework for building APIs',
     icon: Zap,
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-amber-500 to-yellow-500',
+  },
+  {
+    key: 'node' as const,
+    name: 'Node.js',
+    icon: Server,
+    color: 'from-amber-500 to-yellow-500',
   },
 ];
 
 export function Skills() {
   const { t } = useLanguage();
 
+  const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+  };
+
   return (
-    <section id="skills" className="py-20 px-4 bg-white dark:bg-gray-900 transition-colors">
+    <section id="skills" className="py-20 px-4 bg-muted/40 dark:bg-muted/20 border-y border-border transition-colors">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-16" data-reveal>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             {t.skills.title}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            {t.skills.subtitle}
-          </p>
+          <p className="text-lg text-muted-foreground">{t.skills.subtitle}</p>
+          <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal>
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
               <div
                 key={skill.name}
-                className="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-transparent hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                }}
+                onMouseMove={handleMouseMove}
+                className="group spotlight hairline-gradient glass-card relative p-6 rounded-2xl shadow-card hover:shadow-lift transition-all duration-300 hover:-translate-y-1.5 animate-fade-in-up"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-[0.07] rounded-2xl transition-opacity duration-300`}
+                  aria-hidden="true"
+                />
 
                 <div className="relative">
-                  <div className={`w-14 h-14 bg-gradient-to-br ${skill.color} rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-7 h-7 text-white" />
+                  <div
+                    className={`w-14 h-14 bg-gradient-to-br ${skill.color} rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-card`}
+                  >
+                    <Icon className="w-7 h-7 text-white" aria-hidden="true" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {skill.name}
-                  </h3>
-
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {skill.description}
-                  </p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{skill.name}</h3>
+                  <p className="text-muted-foreground">{t.skills[skill.key]}</p>
                 </div>
               </div>
             );

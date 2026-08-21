@@ -1,5 +1,6 @@
 import { Mail, MessageCircle, Send, Github, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { RequestForm } from './RequestForm';
 
 export function Contact() {
   const { t } = useLanguage();
@@ -8,16 +9,16 @@ export function Contact() {
     {
       icon: Mail,
       label: t.contact.email,
-      value: 'mhtmht2400@gmail.com',
+      value: 'opicasoft@gmail.com',
       href: 'mailto:mhtmht2400@gmail.com',
-      color: 'from-red-500 to-pink-500',
+      color: 'from-amber-500 to-yellow-500',
     },
     {
       icon: MessageCircle,
       label: t.contact.whatsapp,
       value: '+235 97 07 24 00',
       href: 'https://wa.me/23597072400',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-emerald-500 to-emerald-600',
     },
   ];
 
@@ -28,25 +29,24 @@ export function Contact() {
       label: 'GitHub',
     },
     {
-      icon: Globe, // هنا أيقونة الموقع أو أي أيقونة مناسبة
+      icon: Globe,
       href: 'https://baaeed.com/u/softwarePioneer',
       label: 'Baaed',
     },
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white dark:bg-gray-900 transition-colors">
+    <section id="contact" className="py-20 px-4 bg-muted/40 dark:bg-muted/20 border-t border-border transition-colors">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-16" data-reveal>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
             {t.contact.title}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            {t.contact.subtitle}
-          </p>
+          <p className="text-lg text-muted-foreground">{t.contact.subtitle}</p>
+          <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mt-6" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" data-reveal>
           {contactMethods.map((method) => {
             const Icon = method.icon;
             return (
@@ -55,26 +55,29 @@ export function Contact() {
                 href={method.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-transparent hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="group hairline-gradient glass-card relative p-8 rounded-2xl shadow-card hover:shadow-lift transition-all duration-300 hover:-translate-y-1.5"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-[0.07] rounded-2xl transition-opacity duration-300`}
+                  aria-hidden="true"
+                />
 
                 <div className="relative">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-8 h-8 text-white" />
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-card`}
+                  >
+                    <Icon className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {method.label}
-                  </h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{method.label}</h3>
+                  <p className="text-muted-foreground mb-4">{method.value}</p>
 
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {method.value}
-                  </p>
-
-                  <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium">
+                  <div className="flex items-center font-medium text-accent">
                     <span>{t.contact.getInTouch}</span>
-                    <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <Send
+                      className="w-4 h-4 ms-2 group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1"
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
               </a>
@@ -82,7 +85,11 @@ export function Contact() {
           })}
         </div>
 
-        <div className="mt-12 flex justify-center space-x-4">
+        <div className="mt-16 max-w-4xl mx-auto" data-reveal>
+          <RequestForm />
+        </div>
+
+        <div className="mt-12 flex justify-center gap-4" data-reveal>
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
@@ -91,19 +98,17 @@ export function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 text-gray-700 dark:text-gray-300 hover:text-white transition-all transform hover:scale-110"
+                className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-accent-foreground hover:bg-gradient-accent hover:border-transparent transition-all duration-300 hover:scale-110 hover:shadow-card"
                 aria-label={social.label}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-5 h-5" aria-hidden="true" />
               </a>
             );
           })}
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
-            © 2024 Mahamat Mahamat Tahir. All rights reserved.
-          </p>
+          <p className="text-muted-foreground">© 2024 Mahamat Mahamat Tahir. All rights reserved.</p>
         </div>
       </div>
     </section>
