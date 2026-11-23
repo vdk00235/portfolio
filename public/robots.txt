@@ -1,0 +1,22 @@
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# GPTBot and ClaudeBot are model-development crawlers. No training preference
+# is set here; their policy remains independent from the search crawler rules.
+
+Sitemap: https://alfa-opica.vercel.app/sitemap.xml

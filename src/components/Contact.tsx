@@ -10,7 +10,7 @@ export function Contact() {
       icon: Mail,
       label: t.contact.email,
       value: 'opicasoft@gmail.com',
-      href: 'mailto:mhtmht2400@gmail.com',
+      href: 'mailto:opicasoft@gmail.com',
       color: 'from-amber-500 to-yellow-500',
     },
     {

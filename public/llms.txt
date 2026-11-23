@@ -1,0 +1,22 @@
+# Mahamat Mahamat Tahir and Opica Soft
+
+> Portfolio of Mahamat Mahamat Tahir, a full-stack developer who works with React, React Native, Flutter, FastAPI and Node.js. The portfolio presents selected web and mobile projects and project contact options associated with Opica Soft.
+
+## Public pages
+- [Portfolio home](https://alfa-opica.vercel.app/): profile, skills, selected projects and contact details.
+
+## Selected projects shown on the portfolio
+- Hasib: full-stack wallet solution with payment integration.
+- LGK site: corporate logistics website.
+- Dashboard Admin: administration dashboard.
+- Social Media Dashboard: social media analytics dashboard.
+- Marketplace App: mobile marketplace.
+- Restaurant App: restaurant reservations and menu browsing.
+
+## Contact
+- Opica Soft: opicasoft@gmail.com
+- WhatsApp: +235 97 07 24 00
+- GitHub: https://github.com/vdk00235
+- Baaed: https://baaeed.com/u/softwarePioneer
+
+The portfolio does not publish a verified street address, legal registration, client list, awards, or certifications. This file is a discovery aid and does not guarantee indexing or AI search visibility.

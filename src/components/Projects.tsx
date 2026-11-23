@@ -200,6 +200,7 @@ export function Projects() {
                   src={project.image}
                   alt={project.title}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
@@ -279,6 +280,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           <img
             src={project.image}
             alt={project.title}
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" aria-hidden="true" />

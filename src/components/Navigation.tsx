@@ -62,9 +62,13 @@ export function Navigation() {
             className="flex-shrink-0"
             aria-label="Go to home"
           >
-            <span className="text-2xl font-display font-bold text-gradient">
-              MT
-            </span>
+            <img
+              src="/mt-logo-new.svg"
+              alt="MT logo"
+              className="h-10 w-10 rounded-xl"
+              width="40"
+              height="40"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-7">
