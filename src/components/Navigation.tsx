@@ -10,13 +10,16 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
   const [scrolled, setScrolled] = useState(false);
+  const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact';
+  const sectionHref = (id: string) => isContactPage ? `/#${id}` : `#${id}`;
 
   const navItems = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.skills, href: '#skills' },
-    { label: t.nav.projects, href: '#projects' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.home, href: sectionHref('home') },
+    { label: t.nav.about, href: sectionHref('about') },
+    { label: t.nav.skills, href: sectionHref('skills') },
+    { label: t.nav.projects, href: sectionHref('projects') },
+    { label: t.nav.contact, href: sectionHref('contact') },
+    { label: t.nav.contactUs, href: '/contact' },
   ];
 
   const languages = [
@@ -57,7 +60,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a
-            href="#home"
+            href={sectionHref('home')}
             onClick={() => setActiveSection('#home')}
             className="flex-shrink-0"
             aria-label="Go to home"

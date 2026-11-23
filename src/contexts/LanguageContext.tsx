@@ -9,6 +9,7 @@ interface Translations {
     skills: string;
     projects: string;
     contact: string;
+    contactUs: string;
     request: string;
   };
   hero: {
@@ -64,8 +65,14 @@ interface Translations {
       sendNote: string;
       sending: string;
       error: string;
+      fallback: string;
       success: string;
     };
+  };
+  contactPage: {
+    title: string;
+    intro: string;
+    startProject: string;
   };
 }
 
@@ -77,6 +84,7 @@ const translations: Record<Language, Translations> = {
       skills: 'Skills',
       projects: 'Projects',
       contact: 'Contact',
+      contactUs: 'Contact Us',
       request: 'Request a Project',
     },
     hero: {
@@ -129,11 +137,17 @@ const translations: Record<Language, Translations> = {
         submit: 'Send Request',
         required: 'This field is required',
         validEmail: 'Please enter a valid email address',
-        sendNote: 'Your request goes straight to my inbox.',
+        sendNote: 'If delivery fails, you can review and send the prepared email yourself.',
         sending: 'Sending...',
-        error: 'Something went wrong. Please try again, or email me directly at mhtmht2400@gmail.com.',
-        success: 'Thanks! I will get back to you soon.',
+        error: 'The request could not be sent. Please try again or email opicasoft@gmail.com directly.',
+        fallback: 'Email delivery could not be confirmed. We tried to open a draft in your email app; if it did not open, contact opicasoft@gmail.com directly.',
+        success: 'Thanks, your request was sent successfully.',
       },
+    },
+    contactPage: {
+      title: 'Contact Us',
+      intro: 'Have a project in mind? Reach out by email or WhatsApp to discuss your goals and the next steps. You can also send a project inquiry using the form below.',
+      startProject: 'Start a Project',
     },
   },
   fr: {
@@ -143,6 +157,7 @@ const translations: Record<Language, Translations> = {
       skills: 'Compétences',
       projects: 'Projets',
       contact: 'Contact',
+      contactUs: 'Contactez-nous',
       request: 'Demander un Projet',
     },
     hero: {
@@ -195,11 +210,17 @@ const translations: Record<Language, Translations> = {
         submit: 'Envoyer la Demande',
         required: 'Ce champ est obligatoire',
         validEmail: 'Veuillez saisir une adresse email valide',
-        sendNote: 'Votre demande arrivera directement dans ma boîte de réception.',
+        sendNote: 'Si l’envoi échoue, vous pourrez vérifier et envoyer vous-même le courriel préparé.',
         sending: 'Envoi en cours...',
-        error: 'Une erreur est survenue. Veuillez réessayer, ou écrivez-moi directement à mhtmht2400@gmail.com.',
-        success: 'Merci ! Je vous recontacterai bientôt.',
+        error: 'La demande n’a pas pu être envoyée. Veuillez réessayer ou écrire directement à opicasoft@gmail.com.',
+        fallback: 'L’envoi du courriel n’a pas pu être confirmé. Nous avons tenté d’ouvrir un brouillon dans votre application de messagerie ; s’il ne s’est pas ouvert, écrivez directement à opicasoft@gmail.com.',
+        success: 'Merci, votre demande a bien été envoyée.',
       },
+    },
+    contactPage: {
+      title: 'Contactez-nous',
+      intro: 'Vous avez un projet en tête ? Écrivez-nous par e-mail ou sur WhatsApp pour discuter de vos objectifs et des prochaines étapes. Vous pouvez aussi envoyer une demande de projet avec le formulaire ci-dessous.',
+      startProject: 'Démarrer un projet',
     },
   },
   ar: {
@@ -209,6 +230,7 @@ const translations: Record<Language, Translations> = {
       skills: 'المهارات',
       projects: 'المشاريع',
       contact: 'اتصل',
+      contactUs: 'اتصل بنا',
       request: 'اطلب مشروعاً',
     },
     hero: {
@@ -261,11 +283,17 @@ const translations: Record<Language, Translations> = {
         submit: 'إرسال الطلب',
         required: 'هذا الحقل مطلوب',
         validEmail: 'يرجى إدخال بريد إلكتروني صحيح',
-        sendNote: 'سيصل طلبك مباشرة إلى بريدي الوارد.',
+        sendNote: 'إذا تعذر الإرسال، يمكنك مراجعة مسودة البريد وإرسالها بنفسك.',
         sending: 'جارٍ الإرسال...',
-        error: 'حدث خطأ ما. حاول مرة أخرى أو راسلني مباشرة على mhtmht2400@gmail.com.',
-        success: 'شكراً لك! سأتواصل معك قريباً.',
+        error: 'تعذر إرسال الطلب. يرجى المحاولة مجدداً أو مراسلة opicasoft@gmail.com مباشرة.',
+        fallback: 'تعذر تأكيد إرسال البريد الإلكتروني. حاولنا فتح مسودة في تطبيق البريد؛ إذا لم تُفتح، يرجى مراسلة opicasoft@gmail.com مباشرة.',
+        success: 'شكراً لك، تم إرسال طلبك بنجاح.',
       },
+    },
+    contactPage: {
+      title: 'اتصل بنا',
+      intro: 'هل لديك مشروع؟ تواصل عبر البريد الإلكتروني أو واتساب لمناقشة أهدافك والخطوات التالية. يمكنك أيضاً إرسال تفاصيل المشروع باستخدام النموذج أدناه.',
+      startProject: 'ابدأ مشروعاً',
     },
   },
 };
@@ -294,6 +322,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = language;
+    const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact';
+    const metadata = {
+      en: {
+        title: isContactPage ? 'Contact Us | Opica Soft' : 'Mahamat Mahamat Tahir | Full-Stack Developer Portfolio',
+        description: isContactPage ? 'Contact Opica Soft about a project by email, WhatsApp, or the project inquiry form.' : 'Portfolio of Mahamat Mahamat Tahir, a full-stack developer building web and mobile applications with React, React Native, Flutter, FastAPI and Node.js. Explore selected projects and contact Opica Soft.',
+      },
+      fr: {
+        title: isContactPage ? 'Contactez-nous | Opica Soft' : 'Mahamat Mahamat Tahir | Portfolio de développeur full-stack',
+        description: isContactPage ? 'Contactez Opica Soft au sujet d’un projet par e-mail, WhatsApp ou le formulaire de demande.' : 'Portfolio de Mahamat Mahamat Tahir, développeur full-stack d’applications web et mobiles avec React, React Native, Flutter, FastAPI et Node.js. Découvrez ses projets et contactez Opica Soft.',
+      },
+      ar: {
+        title: isContactPage ? 'اتصل بنا | Opica Soft' : 'محمد محمد طاهر | معرض أعمال مطور متكامل',
+        description: isContactPage ? 'تواصل مع Opica Soft بشأن مشروع عبر البريد الإلكتروني أو واتساب أو نموذج طلب المشروع.' : 'معرض أعمال محمد محمد طاهر، مطور متكامل لتطبيقات الويب والهواتف باستخدام React وReact Native وFlutter وFastAPI وNode.js. استكشف المشاريع وتواصل مع Opica Soft.',
+      },
+    }[language];
+    document.title = metadata.title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', metadata.description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', metadata.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', metadata.description);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', metadata.title);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', metadata.description);
   }, [language]);
 
   return (

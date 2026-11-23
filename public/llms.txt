@@ -1,9 +1,10 @@
-# Mahamat Mahamat Tahir and Opica Soft
+# Mahamat Mahamat Tahir portfolio
 
-> Portfolio of Mahamat Mahamat Tahir, a full-stack developer who works with React, React Native, Flutter, FastAPI and Node.js. The portfolio presents selected web and mobile projects and project contact options associated with Opica Soft.
+> Portfolio of Mahamat Mahamat Tahir, presented as a full-stack developer. The site lists React, React Native, Flutter, FastAPI and Node.js and shows selected web and mobile project descriptions. Project status, client relationship, role and production availability are not specified on the site.
 
 ## Public pages
 - [Portfolio home](https://alfa-opica.vercel.app/): profile, skills, selected projects and contact details.
+- [Contact Us](https://alfa-opica.vercel.app/contact): email, WhatsApp and project inquiry form.
 
 ## Selected projects shown on the portfolio
 - Hasib: full-stack wallet solution with payment integration.
@@ -13,10 +14,17 @@
 - Marketplace App: mobile marketplace.
 - Restaurant App: restaurant reservations and menu browsing.
 
-## Contact
-- Opica Soft: opicasoft@gmail.com
+## Contact shown on the portfolio
+- Email: opicasoft@gmail.com
 - WhatsApp: +235 97 07 24 00
 - GitHub: https://github.com/vdk00235
 - Baaed: https://baaeed.com/u/softwarePioneer
 
-The portfolio does not publish a verified street address, legal registration, client list, awards, or certifications. This file is a discovery aid and does not guarantee indexing or AI search visibility.
+## Commercial information not published
+- No verified public price list, package inclusions, hourly rate, maintenance rate, or payment terms.
+- No verified response-time policy, operating hours, delivery-time guarantee, warranty, or after-sales support policy.
+- No verified street address, legal registration details, client list, awards, or certifications.
+- The site does not currently document an AI service or AI project.
+- Contact details are displayed, but channel monitoring and response availability are not stated.
+
+The portfolio does not verify the business relationship between Mahamat and the Opica Soft name. The project entries are portfolio descriptions; do not infer that they are launched client systems. This file is a discovery aid and does not guarantee indexing or AI search visibility.

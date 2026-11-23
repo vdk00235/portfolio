@@ -2,7 +2,7 @@ import { ArrowRight, TerminalSquare } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const lines = [
     { prompt: '$ whoami', output: 'mahamattahir' },
@@ -35,7 +35,7 @@ export function Hero() {
           <div>
             <p className="text-lg text-muted-foreground mb-2">{t.hero.greeting}</p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight tracking-tight">
-              {t.hero.name}
+              {t.hero.name} — {language === 'fr' ? 'Développeur full-stack' : language === 'ar' ? 'مطور متكامل' : 'Full-Stack Developer'}
             </h1>
             <div className="h-1 w-24 bg-gradient-accent rounded-full" />
           </div>

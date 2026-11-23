@@ -10,7 +10,7 @@ interface FormErrors {
   description?: string;
 }
 
-type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
+type SubmitStatus = 'idle' | 'sending' | 'sent' | 'fallback' | 'error';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -134,7 +134,7 @@ export function RequestForm() {
     } catch (error) {
       console.error('RequestForm: send failed:', error);
       openMailToFallback();
-      setStatus('sent');
+      setStatus('fallback');
     }
   };
 
@@ -181,13 +181,21 @@ export function RequestForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} noValidate className="space-y-6">
-          {status === 'error' && (
+          {(status === 'error' || status === 'fallback') && (
             <div
-              className="flex items-start gap-3 px-4 py-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+              className={`flex items-start gap-3 px-4 py-3 rounded-lg ${status === 'error'
+                ? 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800'
+                : 'bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800'}`}
               role="alert"
             >
-              <AlertTriangle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" aria-hidden="true" />
-              <p className="text-sm text-red-600 dark:text-red-300">{t.contact.form.error}</p>
+              <AlertTriangle className={`w-5 h-5 shrink-0 mt-0.5 ${status === 'error'
+                ? 'text-red-500'
+                : 'text-amber-600 dark:text-amber-400'}`} aria-hidden="true" />
+              <p className={`text-sm ${status === 'error'
+                ? 'text-red-600 dark:text-red-300'
+                : 'text-amber-800 dark:text-amber-200'}`}>
+                {status === 'error' ? t.contact.form.error : t.contact.form.fallback}
+              </p>
             </div>
           )}
 

@@ -96,6 +96,14 @@ export function Skills() {
             );
           })}
         </div>
+        <div className="mt-10 text-center">
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center px-5 py-2.5 border border-accent text-accent rounded-lg font-semibold hover:bg-accent-soft transition-colors"
+          >
+            {t.nav.contactUs}
+          </a>
+        </div>
       </div>
     </section>
   );

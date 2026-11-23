@@ -332,6 +332,12 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             {t.projects.viewProject}
             <ExternalLink className="w-4 h-4" aria-hidden="true" />
           </a>
+          <a
+            href="/contact"
+            className="mt-8 ms-3 inline-flex items-center gap-2 px-6 py-3 border border-accent text-accent rounded-lg font-semibold hover:bg-accent-soft transition-colors"
+          >
+            {t.nav.contactUs}
+          </a>
         </div>
       </div>
     </div>

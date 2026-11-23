@@ -44,6 +44,12 @@ export function Contact() {
           </h2>
           <p className="text-lg text-muted-foreground">{t.contact.subtitle}</p>
           <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mt-6" />
+          <a
+            href="/contact"
+            className="mt-7 inline-flex items-center justify-center px-5 py-2.5 border border-accent text-accent rounded-lg font-semibold hover:bg-accent-soft transition-colors"
+          >
+            {t.nav.contactUs}
+          </a>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" data-reveal>
@@ -109,6 +115,9 @@ export function Contact() {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">© 2024 Mahamat Mahamat Tahir. All rights reserved.</p>
+          <a href="/contact" className="mt-3 inline-block font-medium text-accent hover:text-foreground transition-colors">
+            {t.nav.contactUs}
+          </a>
         </div>
       </div>
     </section>

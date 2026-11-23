@@ -1,0 +1,58 @@
+phrase,language,market,intent,target_service,proposed_landing_page,competition_evidence,search_volume_evidence,business_value,confidence,publication_status
+développement web au Tchad,fr,Chad,service,Web development,Homepage or web service page,Local providers Chad Connect Tchaditech Albiher advertise websites; direct,High,High,Medium,Conditional on owner confirming service/geography
+création site internet pas cher Tchad,fr,Chad,price,Website,Future pricing page,Adjemson publishes FCFA website tiers; ELK regional FCFA starts,High,High,Medium,Research phrase; price claim unapproved
+prix création site internet Tchad,fr,Chad,price,Website,Future pricing page,Adjemson publishes tiered tariffs,High,High,Medium,Research only until Opica pricing approval
+agence web abordable au Tchad,fr,Chad,price/service,Web development,Future services page,Local market contains quote-first competitors and public price card,High,Medium,Low,Do not claim Opica agency or affordability until confirmed
+développement application mobile au Tchad,fr,Chad,specialization,Mobile app,Future mobile service page,Local services and regional FCFA mobile packages observed,High,High,Medium,Conditional on service and geography approval
+développeur Flutter au Tchad,fr,Chad,specialization,Flutter app,Future Flutter case study/service page,Flutter listed in portfolio; regional competitor advertises Flutter/React Native,Medium,Medium,High,Use personal developer position only after work details confirmed
+développeur React Native Tchad,fr,Chad,specialization,React Native,Future mobile case study page,React Native listed in portfolio and regional package,Medium,Medium,High,Project status/role need confirmation
+développeur FastAPI Tchad,fr,Chad,specialization,Backend/API,Future backend case study,FastAPI skill listed; no keyword-volume evidence,Low,Medium,Medium,Use only as technology and exact role evidence
+développement API Tchad,fr,Chad,specialization,Backend/API,Future backend page,Some local providers mention custom digital systems; no direct price,Low,Medium,Medium,Owner scope confirmation needed
+développement e-commerce Tchad,fr,Chad,specialization,Commerce,Future ecommerce service page,Adjemson and ELK publish ecommerce scope/prices,Medium,High,Medium,Portfolio doesn't verify active commerce offer
+application de gestion sur mesure Tchad,fr,Chad,specialization,Custom software,Future case study/service page,Local firms pitch custom digital tools; no Opica proof,Low,Medium,Low,Defer until real project evidence
+prix application mobile Tchad,fr,Chad,price,Mobile app,Future pricing/FAQ page,Regional public start price and local quote-first services,Medium,High,Medium,No Opica rate to compare
+support technique rapide Tchad,fr,Chad,speed/trust,Support,Future support page,Tchaditech advertises reactive support and monitoring,Medium,Medium,Low,Do not promise response target before tracking
+agence web réactive au Tchad,fr,Chad,speed,Communication,Future contact policy page,Albiher says response under 48h; Tchaditech under 24 business hours,High,Medium,Low,Need owner-approved measured target
+délai création site web Tchad,fr,Chad,delivery,Website delivery,Future delivery FAQ,Adjemson publishes 3/15/25 workday tiers; Albiher 1-3 weeks,High,Medium,Medium,Competitor data only; Opica timeline unknown
+développeur fiable au Tchad,fr,Chad,trust,All services,Homepage or profile,Competitors publish testimonials/process; no volume evidence,Low,Medium,Low,Need client evidence/testimonials with consent
+maintenance site web Tchad,fr,Chad,support,Maintenance,Future support page,Adjemson publishes maintenance 5-10k/month; Tchaditech contracts,High,Medium,Medium,Opica support capability and pricing unknown
+garantie développement logiciel,fr,Chad / Africa,trust/warranty,Software QA,Future warranty page,Regional providers commonly publish 15-90 day windows,Medium,Medium,Low,Owner and legal approval required before publishing
+entreprise développement logiciel Afrique,fr,Africa,specialization,Software development,Future services page,Regional agencies market fixed price/custom software,Medium,Medium,Medium,Brand/service geography unconfirmed
+شركة تطوير برمجيات في تشاد,ar,Chad,service,Software development,Homepage or service page,Arabic keyword suggestion; local competitor evidence mostly French,Low,High,Medium,Confirm service/location and Arabic sales support
+شركة تصميم مواقع في تشاد,ar,Chad,service,Website,Future web page,Local competitors offer websites; no volume data,Low,High,Medium,Conditional on actual offer/geography
+شركة برمجة بأسعار مناسبة في تشاد,ar,Chad,price,Software development,Future pricing page,Chad public website prices found; no Opica rates,High,High,Low,Do not claim affordability before price audit
+أسعار تصميم المواقع في تشاد,ar,Chad,price,Website,Future pricing FAQ,One public Chadian rate card found,Medium,High,Medium,Do not invent search volume or own price
+تطوير تطبيقات الهاتف في تشاد,ar,Chad,specialization,Mobile app,Future mobile page,Portfolio lists Flutter/React Native and app concepts,Medium,High,Medium,Need project and service verification
+مطور Flutter في تشاد,ar,Chad,specialization,Flutter,Profile or Flutter case study,Flutter badge and restaurant app concept in portfolio,Low,Medium,High,Confirm status and role
+تطوير تطبيقات أندرويد في نجامينا,ar,Chad,specialization,Android,Future mobile page,No city-level business location confirmed,Low,Medium,Medium,Geographic/service claim conditional
+شركة برمجيات سريعة الرد,ar,Chad,speed,Communication,Future contact policy,Competitor response claims observed; no Opica response data,Low,Medium,Low,Do not publish response promise
+دعم فني سريع في تشاد,ar,Chad,support,Technical support,Future support page,Tchaditech publishes support and hours,Medium,Medium,Low,No Opica support policy
+كم تكلفة تطبيق جوال في تشاد,ar,Chad,price,Mobile app,Future pricing FAQ,Competitors quote after scope and regional provider publishes starts,Medium,High,Medium,Useful FAQ only with approved pricing model
+ضمان إصلاح أخطاء البرمجيات,ar,Africa,trust/warranty,QA/support,Future warranty page,Regional policies range from 15 to 90 days,Low,Medium,Low,No guarantee until owner approval
+شركة تطوير تطبيقات بأسعار معقولة,ar,Africa,price,Mobile app,Future pricing page,Regional public starting prices exist,Low,Medium,Low,General phrase; no volume data
+مطور برمجيات في نجامينا,ar,N'Djamena,service,Developer profile,Profile page,Location not established by +235 number,Low,Medium,Medium,Only after service-area confirmation
+software development company in Chad,en,Chad,service,Software development,Future services page,Local competitors publicly offer digital services,Medium,High,Medium,Opica organization relationship/service scope unconfirmed
+affordable software development company Chad,en,Chad,price,Software development,Future pricing page,One Chad rate card and quote-only providers observed,Medium,High,Low,Do not claim affordable before actual rate comparison
+website development cost Chad,en,Chad,price,Website,Future pricing FAQ,Public FCFA tiers available from Adjemson; ELK regional price starts,High,High,Medium,No Opica price available
+mobile app development cost Chad,en,Chad,price,Mobile app,Future pricing FAQ,Regional FCFA starts; local project quote patterns,Medium,High,Medium,Need approved rate card
+Flutter developer Chad,en,Chad,specialization,Flutter,Profile or Flutter project page,Flutter listed in portfolio; app role/status unknown,Medium,High,High,Personal positioning conditional on owner confirmation
+React Native app developer Chad,en,Chad,specialization,React Native,Profile or project page,React Native skill and marketplace concept listed,Low,Medium,High,Need work evidence and service area
+FastAPI developer Chad,en,Chad,specialization,FastAPI/API,Backend case study,FastAPI skill listed; project summary mentions API/backend,Low,Medium,Medium,Claims must match exact role
+ecommerce development Chad,en,Chad,specialization,E-commerce,Future commerce page,Competitor packages include ecommerce and payments,Medium,High,Medium,No confirmed Opica production offer
+custom software development Africa,en,Africa,specialization,Custom software,Future service page,Regional agencies publish custom app pricing,Medium,High,Medium,Service and delivery capacity unconfirmed
+AI development company Chad,en,Chad,specialization,AI,Future AI page,No AI project/service evidenced in portfolio,Low,High,Low,Research only; do not target publicly yet
+AI automation company Africa,en,Africa,specialization,AI automation,Future AI page,Competitor add-on pricing exists; no Opica proof,Low,Medium,Low,Research only
+business management system developer Chad,en,Chad,specialization,Custom software,Future case study,Portfolio dashboard descriptions; no production proof,Low,Medium,Low,Requires actual deployed case study
+fast responding software developer Chad,en,Chad,speed,Communication,Future contact policy,Competitors advertise 24 business hours / 48 hours,Medium,Medium,Low,Set only after response tracking and approval
+responsive software company Chad,en,Chad,speed,Communication,Future contact page,Local competitor language observed,Low,Medium,Low,Company identity not confirmed
+fast technical support Chad,en,Chad,support,Support,Future support page,Tchaditech advertises maintenance/support,Medium,Medium,Low,Opica support capability unverified
+software development with warranty,en,Africa,trust/warranty,QA/support,Future warranty page,"Competitor policies 15, 30, and 60-90 days",Medium,Medium,Low,No Opica terms published
+software maintenance and support,en,Chad,support,Maintenance,Future support page,Local maintenance contracts are advertised,Medium,Medium,Medium,Need package/capacity confirmation
+rapid MVP development Africa,en,Africa,speed,Mobile/web MVP,Future delivery page,Regional agency publishes MVP time ranges,Medium,High,Low,No Opica delivery history to substantiate rapid claim
+fast website development Chad,en,Chad,speed,Website delivery,Future delivery page,Local competitor advertises one-week showcase website,Medium,Medium,Low,Do not claim faster than competitors
+guaranteed bug fixing software,en,Africa,trust,QA/support,Future warranty page,Competitor terms define bugs and exclusions; exact volumes unknown,Low,Medium,Low,Avoid “guaranteed” as broad result claim
+reliable software developer Chad,en,Chad,trust,Developer profile,Homepage/profile,No Opica testimonials or client references verified,Low,Medium,Low,Collect authorized references first
+Flutter app development company Africa,en,Africa,specialization,Flutter,Future project page,Regional FCFA package explicitly offers Flutter or React Native,Medium,Medium,Medium,Confirm agency relationship and actual expertise
+API integration company Chad,en,Chad,specialization,API development,Future backend page,Local custom software offers observed but Opica evidence limited,Low,Medium,Low,Need concrete integration case study
+responsive web developer in Chad,en,Chad,speed/service,Web development,Future contact/service page,Search intent inferred from natural language; no volume data,Low,Medium,Low,Wait for service/location approval
+after delivery support software Chad,en,Chad,trust/support,Support,Future warranty page,Tchaditech and Albiher mention maintenance/follow-up,Medium,Medium,Medium,Need approved policy and operating capacity
